@@ -2,40 +2,16 @@
 
 namespace MovieService
 {
-    class Category
+    public class Category
     {
-        private string name;
-        private ICollection<Movie> movies;
+        public string Name { get; set; }
+        public ICollection<Movie> Movies { get; set; }
 
-        public Category(string name, ICollection<Movie> movies)
+        public Category()
         {
-            var categoryMovieList = new List<Category>();
+
+            Movies = new List<Movie>();
         }
 
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-
-            set
-            {
-                name = value;
-            }
-        }
-
-        internal ICollection<Movie> Movies
-        {
-            get
-            {
-                return movies;
-            }
-
-            set
-            {
-                movies = value;
-            }
-        }
     }
 }

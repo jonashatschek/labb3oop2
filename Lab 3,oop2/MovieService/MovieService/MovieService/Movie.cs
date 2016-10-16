@@ -3,82 +3,20 @@ using System.Windows.Forms;
 
 namespace MovieService
 {
-    class Movie
+    public class Movie
     {
-        private string title;
-        private int yearOfPublication;
-        private double rating;
-        private int numberOfUserVotes;
-        private ICollection<Category> categories;
+        public string Title { get; set; }
+        public int YearOfPublication { get; set; }
+        public double Rating { get; set; }
+        public int NumberOfUserVotes { get; set; }
+        public ICollection<Category> Categories { get; set; }
 
-        public Movie(string title, int yearOfPublication, double rating, int numberOfUserVotes, ICollection<Category> categories)
+        public Movie()
         {
-            var movieCategoryList = new List<Movie>();
+
+            Categories = new List<Category>();
+
         }
-
-        public string Title
-        {
-            get
-            {
-                return title;
-            }
-
-            set
-            {
-                title = value;
-            }
-        }
-
-        public int YearOfPublication
-        {
-            get
-            {
-                return yearOfPublication;
-            }
-
-            set
-            {
-                yearOfPublication = value;
-            }
-        }
-
-        public double Rating
-        {
-            get
-            {
-                return rating;
-            }
-
-            set
-            {
-                rating = value;
-            }
-        }
-
-        public int NumberOfUserVotes
-        {
-            get
-            {
-                return numberOfUserVotes;
-            }
-
-            set
-            {
-                numberOfUserVotes = value;
-            }
-        }
-
-        internal ICollection<Category> Categories
-        {
-            get
-            {
-                return categories;
-            }
-
-            set
-            {
-                categories = value;
-            }
-        }
+        
     }
 }
